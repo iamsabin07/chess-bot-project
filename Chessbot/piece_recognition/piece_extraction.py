@@ -7,12 +7,12 @@ screenshot = pg.screenshot()
 screenshot = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
 
 # to locate the chess board in the screenshot
-chess_board = pg.locateOnScreen('chess_board.png')
+chess_board = pg.locateOnScreen('chess.png')
 
 # constant of the chess board in the screenshot
 y = chess_board.top
 x = chess_board.left
-BOARD_SIZE = 948
+BOARD_SIZE = 545
 CELL_SIZE = int(BOARD_SIZE/8)
 
 # mapping the chess pieces
@@ -64,3 +64,4 @@ for row in range(8):
     y += CELL_SIZE
 
 cv2.destroyAllWindows()
+print(chess_board)
